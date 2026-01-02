@@ -1,3 +1,0 @@
-src/umtool/umtool /usr/local/bin
-src/umtool/*.json /usr/share/umtool
-21-ultimarc.rules /etc/udev/rules.d
