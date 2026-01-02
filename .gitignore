@@ -5,6 +5,7 @@ cmake-build-debug
 # Object files
 *.o
 *.ko
+src/build/
 
 # Libraries
 *.lib
