@@ -35,5 +35,5 @@ make
 The executable will be in src/build directory and named umtool.
 * ./umtool ../src/ipac2.json
 
-#### Donations:
+#### Donations (Original author link):
 <a href='https://paypal.me/snowywhitewater?locale.x=en_US'>Click here to lend your support through PayPal!</a>
