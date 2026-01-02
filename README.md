@@ -20,20 +20,57 @@ To build this tool the following libraries need to be install on your system.
 #### UDEV Rule:
 This utility requires folder permission changes to the usb device directories before it can do the configuration changes to the boards.  The udev rule in the base directory named 21-ultimarc.rules needs to be placed in /etc/udev/rules.d directory.  Placing the file in that directory usually requires root permissions.
 
+# Building with CMake
 
-#### Building Utility:
-To build this project, create a build folder and run
+## Dependencies
 
+Install the required development packages:
+
+### Ubuntu/Debian
+```bash
+sudo apt-get install cmake libjson-c-dev libusb-1.0-0-dev
 ```
-cd src
+
+### Fedora/RHEL/CentOS
+```bash
+sudo dnf install cmake json-c-devel libusb1-devel
+```
+
+### Arch Linux
+```bash
+sudo pacman -S cmake json-c libusb
+```
+
+## Build Instructions
+
+```bash
+cd /path/to/Ultimarc-linux/src
 mkdir build
 cd build
 cmake ..
 make
 ```
 
-The executable will be in src/build directory and named umtool.
-* ./umtool ../src/ipac2.json
+The `umtool` executable will be created in the build directory.
+
+## Installation (Optional)
+
+To install the executable and library system-wide:
+
+```bash
+sudo make install
+```
+
+This will install:
+- `umtool` binary to `/usr/local/bin`
+- `libultimarc.a` library to `/usr/local/lib`
+- Header files to `/usr/local/include/ultimarc`
+
+## Running
+
+```bash
+./umtool --help
+```
 
 #### Donations (Original author link):
 <a href='https://paypal.me/snowywhitewater?locale.x=en_US'>Click here to lend your support through PayPal!</a>
